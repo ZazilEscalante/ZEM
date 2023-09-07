@@ -18,9 +18,10 @@
     <!-- place navbar here -->
   </header>
   <main>
-    <div class="container h-100" style="padding-top: 15rem;">
+    <div class="container h-100" style="padding-top: 4rem;">
         <div class="row justify-content-center align-item-center h-100">
-            <div class="card">
+            <div class="col-12 col-sm-12 col-md-3 mb-3">
+            <div class="card ">
                 <div class="card-body">
                     <form action="./function/insert.php" method="POST">
                         <div class="mb-3">
@@ -39,6 +40,47 @@
                     </form>
                 </div>
             </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-9">
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                      <tr>
+                      <th scopes="col">#</th>
+                      <th scopes="col">Nombres</th>
+                      <th scopes="col">Email</th>
+                      <th scopes="col">Telefono</th>
+                      <th scopes="col"></th>
+                      <th scopes="col"></th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    require("./connection/connection.php");
+                    $query = "SELECT * FROM usuario";
+                    $ejecutar = mysqli_query($connection, $query);
+                    $contador = 1;
+                    while($fila = mysqli_fetch_array($ejecutar)){
+                    ?>
+                    <tr>
+                      <td><?php echo $contador;?></td>
+                      <td><?php echo $fila['nombre'];?></td>
+                      <td><?php echo $fila['email'];?></td>
+                      <td><?php echo $fila['tel'];?></td>
+                      <td><a href="./function/update.php">editar</a></td>
+                      <td><a href="./function/delete.php?id='<?php echo $fila['id_usuario'];?>'"eliminar</a></td>
+                      
+                    </tr>
+                    <?php 
+                  $contador++;  } ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
   </main>
