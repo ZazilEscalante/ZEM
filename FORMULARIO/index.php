@@ -15,7 +15,10 @@
 
 <body>
   <header>
-    <!-- place navbar here -->
+    <?php
+    include("./partials/navbar.html");
+    
+    ?>
   </header>
   <main>
     <div class="container h-100" style="padding-top: 4rem;">
@@ -58,6 +61,7 @@
                       </tr>
                   </thead>
                   <tbody>
+                    
                     <?php
                     require("./connection/connection.php");
                     $query = "SELECT * FROM usuario";
@@ -70,12 +74,13 @@
                       <td><?php echo $fila['nombre'];?></td>
                       <td><?php echo $fila['email'];?></td>
                       <td><?php echo $fila['tel'];?></td>
-                      <td><a href="./function/update.php">editar</a></td>
-                      <td><a href="./function/delete.php?id='<?php echo $fila['id_usuario'];?>'"eliminar</a></td>
+                      <td><a href="./function/update.php?id=<?php echo $fila['id_usuario'];?>">editar</a></td>
+                      <td><a href="./function/delete.php?id=<?php echo $fila['id_usuario'];?>">eliminar</a></td>
                       
                     </tr>
                     <?php 
                   $contador++;  } ?>
+                    
                   </tbody>
                 </table>
               </div>
