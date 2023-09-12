@@ -41,9 +41,9 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
-                </div>
             </div>
-          </div>
+            </div>
+        </div>
           <div class="col-12 col-sm-12 col-md-9">
             <div class="card">
               <div class="card-body">
@@ -74,7 +74,7 @@
                       <td><?php echo $fila['nombre'];?></td>
                       <td><?php echo $fila['email'];?></td>
                       <td><?php echo $fila['tel'];?></td>
-                      <td><a href="./function/update.php?id=<?php echo $fila['id_usuario'];?>">editar</a></td>
+                      <td><a href="./view/update_form.php?id=<?php echo $fila['id_usuario'];?>">editar</a></td>
                       <td><a href="./function/delete.php?id=<?php echo $fila['id_usuario'];?>">eliminar</a></td>
                       
                     </tr>
