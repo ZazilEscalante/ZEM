@@ -19,7 +19,32 @@
     <?php include 'include/header.php'; ?>
   </header>
   <main>
-
+    <div class="container h-100" style="padding-top: 15rem;">
+      <div class="row justify-content-center align-items-center g-2">
+                <div class="col">
+                    <h2>Sistema de Tickets para la Gestión de Incidencias</h2>
+                    <p>Nuestra plataforma proporciona una solución eficaz para gestionar incidencias y problemas de
+                        manera organizada.</p>
+                </div>
+                <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <form action="./auth/login.php" method="post">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" name="email" placeholder="email">
+                              <label>Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" name="email" placeholder="password">
+                              <label>Password</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+      </div>
+    </div>
   </main>
   <footer>
     <!-- place footer here -->
