@@ -18,7 +18,7 @@
 <body>
   <header>
     <?php
-    //include("./partials/navbar.html");
+    include("../../../includes/header_admin.php");
     ?>
   </header>
   <main>

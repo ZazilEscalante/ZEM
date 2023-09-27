@@ -11,7 +11,7 @@ $query = "INSERT INTO area (nombre_area) VALUES ('$nombre')";
 
 $ejecutar = mysqli_query($connection, $query);
 
-header("location: ../index.php");
+header("Location: ../index.php");
 
 
 ?>
