@@ -1,11 +1,11 @@
 <?php
 
-require('../connection/connection.php');
+require('../../../include/db.php');
 
 $id = $_GET['id'];
 
 
-$query = "DELETE FROM usuario WHERE id_usuario = '$id'";
+$query = "DELETE FROM area WHERE id_area = '$id'";
 
 $ejecutar = mysqli_query($connection, $query);
 
@@ -15,4 +15,4 @@ header("location: ../index.php");
 
 //echo "<br> Nombre del usuario: {$nombre} email: {$email} tel: {telefono}";
 
-?>
+?>  
