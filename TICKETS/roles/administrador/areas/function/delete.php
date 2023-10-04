@@ -1,6 +1,6 @@
 <?php
 
-require('../../../include/db.php');
+require('../../../../include/db.php');
 
 $id = $_GET['id'];
 

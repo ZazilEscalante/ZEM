@@ -2,7 +2,7 @@
 
 // para testear que se recibe los datos print_r($_POST);
 
-require('../../../include/db.php');
+require('../../../../include/db.php');
 
 $nombre = $_POST['nombre'];
 

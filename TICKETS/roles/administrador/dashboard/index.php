@@ -17,7 +17,7 @@
   <header>
     <!-- place navbar here -->
     <?php
-    include("../../../includes/header_admin.php");
+    include("../../../include/header_admin.php");
     ?>
   </header>
   <main>
