@@ -33,8 +33,7 @@ CREATE TABLE `administrador` (
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `id_area` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- --------------------------------------------------------
 
 --
@@ -44,7 +43,7 @@ CREATE TABLE `administrador` (
 CREATE TABLE `area` (
   `id_area` int(11) NOT NULL,
   `nombre_area` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `area`
@@ -66,7 +65,7 @@ CREATE TABLE `cliente` (
   `nombre_cliente` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -78,8 +77,8 @@ CREATE TABLE `comentario` (
   `id_comentario` int(11) NOT NULL,
   `id_ticket` int(11) DEFAULT NULL,
   `comentario` text DEFAULT NULL,
-  `fecha_creacion` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `fecha_creacion` datetime DEFAULT current_timestamp
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -90,7 +89,7 @@ CREATE TABLE `comentario` (
 CREATE TABLE `estatus` (
   `id_estatus` int(11) NOT NULL,
   `nombre_estatus` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `estatus`
@@ -111,7 +110,7 @@ INSERT INTO `estatus` (`id_estatus`, `nombre_estatus`) VALUES
 CREATE TABLE `nivel` (
   `id_nivel` int(11) NOT NULL,
   `nombre_nivel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `nivel`
@@ -137,9 +136,9 @@ CREATE TABLE `ticket` (
   `incidencia` text DEFAULT NULL,
   `id_nivel` int(11) DEFAULT NULL,
   `id_estatus` int(11) DEFAULT NULL,
-  `fecha_creacion` datetime DEFAULT current_timestamp(),
+  `fecha_creacion` datetime DEFAULT current_timestamp,
   `fecha_cerrado` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Índices para tablas volcadas
