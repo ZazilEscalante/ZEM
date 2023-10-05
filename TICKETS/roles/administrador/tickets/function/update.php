@@ -1,11 +1,11 @@
 <?php
-require ('../../../../includes/db.php');
+require ('../../../../include/db.php');
 
 $id = $_GET['id'];
 $nombre = $_POST['nombre'];
 
 
-$query = "UPDATE area SET nombre_area = '$nombre' WHERE id_area = '$id'";
+$query = "UPDATE nivel SET nombre_nivel = '$nombre' WHERE id_nivel = '$id'";
 
 $ejecutar = mysqli_query($connection, $query);
 

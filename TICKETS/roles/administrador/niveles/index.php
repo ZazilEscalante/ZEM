@@ -52,7 +52,7 @@
                 </thead>
                 <tbody>
                 <?php
-                  require("../../../includes/db.php");
+                  require("../../../include/db.php");
 
                   $query = "SELECT * FROM nivel";
 
@@ -71,7 +71,7 @@
                               <?php echo $fila[ 'nombre_nivel' ]; ?>
                           </td>
                           <td><a href="./view/update_form.php?id=<?php echo $fila[ 'id_nivel' ]; ?>"><i class="bi bi-pencil-square text-warning"></i></a></td>
-                          <td><a href="./functions/delete.php?id=<?php echo $fila[ 'id_nivel' ]; ?>"><i class="bi bi-trash2-fill text-danger"></i></a></td>
+                          <td><a href="./function/delete.php?id=<?php echo $fila[ 'id_nivel' ]; ?>"><i class="bi bi-trash2-fill text-danger"></i></a></td>
                       </tr>
                       <?php $contador++;
                   } ?>

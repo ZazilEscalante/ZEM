@@ -2,7 +2,7 @@
 
 //print_r($_POST);
 
-require("../../../../includes/db.php");
+require("../../../../include/db.php");
 
 $id = $_POST[ 'id' ];
 $nombre = $_POST[ 'nombre' ];
