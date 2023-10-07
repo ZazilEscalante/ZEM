@@ -1,5 +1,5 @@
 <?php
-require ('../../../../include/db.php');
+require ('../../../../includes/db.php');
 
 $id = $_GET['id'];
 $nombre = $_POST['nombre'];
